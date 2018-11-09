@@ -107,7 +107,7 @@ class ShopCategoryData extends PolymerElement {
         }
         this._getResource({
             // url: 'data/' + category.name + '.json',
-            url: "http://localhost:3000/api/v1/products.json",
+            url: "http://191.252.120.225/api/v1/products.json",
             // url: "http://localhost:3000/getproducts?token=0ef005fa2a55a005a316ae0f40c424cae820f4804e5acad8",
             categoryName: category.name,
             onLoad(e) {
@@ -164,8 +164,8 @@ class ShopCategoryData extends PolymerElement {
             }
         });
 
-        xhr.open('GET', rq.url + "?q[name_cont]="+ rq.categoryName);
-        xhr.setRequestHeader('X-Spree-Token', '0ef005fa2a55a005a316ae0f40c424cae820f4804e5acad8')
+        xhr.open('GET', rq.url + "?q[name_cont]="+ rq.categoryName );
+        xhr.setRequestHeader('X-Spree-Token', '0ef005fa2a55a005a316ae0f40c424cae820f4804e5acad8');
         xhr.send();
     }
 
